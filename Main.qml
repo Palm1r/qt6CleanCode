@@ -1,6 +1,6 @@
 import QtQuick
 
-import ui.CpuArchitecture
+import UI.CpuArchitecture
 
 Window {
     width: 640
