@@ -8,6 +8,8 @@ find_package(Qt6 6.5 REQUIRED COMPONENTS Quick)
 
 qt_standard_project_setup(REQUIRES 6.5)
 
+add_subdirectory(ui)
+
 qt_add_executable(appqt6CleanCode
     main.cpp
 )
@@ -17,6 +19,7 @@ qt_add_qml_module(appqt6CleanCode
     VERSION 1.0
     QML_FILES Main.qml
 )
+
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
@@ -30,7 +33,7 @@ set_target_properties(appqt6CleanCode PROPERTIES
 )
 
 target_link_libraries(appqt6CleanCode
-    PRIVATE Qt6::Quick
+    PRIVATE Qt6::Quick CpuArchitectureplugin
 )
 
 include(GNUInstallDirs)
