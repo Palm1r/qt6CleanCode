@@ -1,6 +1,6 @@
 import QtQuick
 
-import UI.CpuArchitecture
+import UI.OsInfo
 
 Window {
     width: 640
@@ -8,5 +8,7 @@ Window {
     visible: true
     title: qsTr("Hello World")
 
-    CpuType {}
+    OsInfo {
+        anchors.centerIn: parent
+    }
 }
